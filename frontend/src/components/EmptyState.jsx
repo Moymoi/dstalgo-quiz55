@@ -20,7 +20,6 @@ const EmptyState = () => {
           fontSize: '28px',
           fontWeight: '700',
           color: '#e0e0f0',
-          marginBottom: '12px',
           margin: '0 0 12px 0',
         }}
       >

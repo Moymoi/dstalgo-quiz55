@@ -117,8 +117,8 @@ const conversationSlice = createSlice({
       .addCase(sendMessage.fulfilled, (state, action) => {
         state.loading = false;
         state.activeConversation = action.payload;
-        const exists = state.conversations.find((c) => c._id === action.payload._id);
-        if (!exists) {
+        const existingConversation = state.conversations.find((c) => c._id === action.payload._id);
+        if (!existingConversation) {
           state.conversations = [action.payload, ...state.conversations];
         } else {
           state.conversations = state.conversations.map((c) =>
